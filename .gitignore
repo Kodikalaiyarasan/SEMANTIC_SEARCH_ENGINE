@@ -1,0 +1,44 @@
+# ── Virtual Environment ────────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── Python ─────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# ── ML Model Caches ───────────────────────────────────────────
+*.pt
+*.bin
+*.onnx
+.cache/
+huggingface/
+
+# ── IDE / Editor ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Docker ────────────────────────────────────────────────────
+# (Dockerfile and docker-compose.yml are tracked)
+
+# ── Misc ──────────────────────────────────────────────────────
+*.log
+*.env
+.env.*

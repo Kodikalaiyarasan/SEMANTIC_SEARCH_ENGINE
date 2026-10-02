@@ -1,0 +1,402 @@
+[
+  {
+    "id": "doc-001",
+    "text": "Transformers are a class of deep learning models that use self-attention mechanisms to process sequential data. Unlike RNNs, transformers can process all tokens in a sequence simultaneously, enabling massive parallelism during training.",
+    "metadata": {"category": "deep-learning", "source": "nlp-textbook"}
+  },
+  {
+    "id": "doc-002",
+    "text": "FAISS (Facebook AI Similarity Search) is a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM.",
+    "metadata": {"category": "vector-search", "source": "faiss-docs"}
+  },
+  {
+    "id": "doc-003",
+    "text": "Docker containers package an application and its dependencies into a standardised unit for software development. Containers are lightweight, portable, and ensure consistency across development, testing, and production environments.",
+    "metadata": {"category": "devops", "source": "docker-docs"}
+  },
+  {
+    "id": "doc-004",
+    "text": "FastAPI is a modern, high-performance web framework for building APIs with Python 3.7+ based on standard Python type hints. It offers automatic interactive API documentation, data validation, and serialization via Pydantic.",
+    "metadata": {"category": "web-framework", "source": "fastapi-docs"}
+  },
+  {
+    "id": "doc-005",
+    "text": "Cosine similarity measures the cosine of the angle between two non-zero vectors in an inner product space. It is widely used in NLP to compare document embeddings because it is invariant to vector magnitude.",
+    "metadata": {"category": "math", "source": "linear-algebra-ref"}
+  },
+  {
+    "id": "doc-006",
+    "text": "Sentence-BERT (SBERT) modifies the BERT architecture by using siamese and triplet network structures to derive semantically meaningful sentence embeddings that can be compared using cosine similarity.",
+    "metadata": {"category": "nlp", "source": "sbert-paper"}
+  },
+  {
+    "id": "doc-007",
+    "text": "Kubernetes orchestrates containerized applications across a cluster of machines. It automates deployment, scaling, and management of application containers, supporting declarative configuration and automation.",
+    "metadata": {"category": "devops", "source": "k8s-docs"}
+  },
+  {
+    "id": "doc-008",
+    "text": "The all-MiniLM-L6-v2 model maps sentences and paragraphs to a 384-dimensional dense vector space. It was trained on over 1 billion sentence pairs and achieves strong performance on semantic textual similarity benchmarks.",
+    "metadata": {"category": "nlp-model", "source": "huggingface-hub"}
+  },
+  {
+    "id": "doc-009",
+    "text": "Redis is an in-memory data structure store used as a database, cache, message broker, and streaming engine. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, and bitmaps.",
+    "metadata": {"category": "database", "source": "redis-docs"}
+  },
+  {
+    "id": "doc-010",
+    "text": "Approximate Nearest Neighbor (ANN) algorithms trade a small amount of accuracy for significant speedups in high-dimensional vector search. Popular ANN methods include HNSW, IVF, and product quantization.",
+    "metadata": {"category": "vector-search", "source": "ann-benchmarks"}
+  },
+  {
+    "id": "doc-011",
+    "text": "PostgreSQL is an advanced open-source relational database management system that supports both SQL and JSON querying. It is known for its robustness, extensibility, and standards compliance.",
+    "metadata": {"category": "database", "source": "postgresql-docs"}
+  },
+  {
+    "id": "doc-012",
+    "text": "Gradient descent is an optimisation algorithm used to minimise a function by iteratively moving in the direction of steepest descent as defined by the negative of the gradient. It is the backbone of neural network training.",
+    "metadata": {"category": "machine-learning", "source": "ml-textbook"}
+  },
+  {
+    "id": "doc-013",
+    "text": "REST APIs use HTTP methods like GET, POST, PUT, and DELETE to perform CRUD operations on resources. RESTful design emphasises stateless communication, uniform interfaces, and resource-based URIs.",
+    "metadata": {"category": "web-development", "source": "rest-guide"}
+  },
+  {
+    "id": "doc-014",
+    "text": "Pydantic is a data validation library for Python that uses Python type annotations. It enforces type hints at runtime and provides user-friendly errors when data is invalid, making it ideal for API payload validation.",
+    "metadata": {"category": "python", "source": "pydantic-docs"}
+  },
+  {
+    "id": "doc-015",
+    "text": "The attention mechanism in neural networks allows models to focus on relevant parts of the input when producing output. Scaled dot-product attention computes weights as softmax of query-key dot products divided by the square root of the key dimension.",
+    "metadata": {"category": "deep-learning", "source": "attention-paper"}
+  },
+  {
+    "id": "doc-016",
+    "text": "CI/CD pipelines automate the process of integrating code changes, running tests, and deploying applications. Continuous Integration ensures code quality while Continuous Deployment enables rapid, reliable releases.",
+    "metadata": {"category": "devops", "source": "cicd-guide"}
+  },
+  {
+    "id": "doc-017",
+    "text": "Word2Vec is a neural network-based technique that learns word embeddings from large text corpora. It uses either the Skip-gram or CBOW architecture to map words to dense vector representations that capture semantic relationships.",
+    "metadata": {"category": "nlp", "source": "word2vec-paper"}
+  },
+  {
+    "id": "doc-018",
+    "text": "Microservices architecture decomposes applications into small, independently deployable services. Each service runs in its own process and communicates via lightweight protocols like HTTP/REST or gRPC.",
+    "metadata": {"category": "architecture", "source": "microservices-guide"}
+  },
+  {
+    "id": "doc-019",
+    "text": "TF-IDF (Term Frequency-Inverse Document Frequency) is a statistical measure used to evaluate the importance of a word in a document relative to a corpus. It is commonly used as a feature in text classification and information retrieval.",
+    "metadata": {"category": "nlp", "source": "ir-textbook"}
+  },
+  {
+    "id": "doc-020",
+    "text": "PyTorch is an open-source machine learning library developed by Meta AI. It provides tensor computation with GPU acceleration and a dynamic computational graph that enables flexible model building and debugging.",
+    "metadata": {"category": "machine-learning", "source": "pytorch-docs"}
+  },
+  {
+    "id": "doc-021",
+    "text": "Load balancing distributes incoming network traffic across multiple servers to ensure no single server is overwhelmed. Common algorithms include round-robin, least connections, and IP hash.",
+    "metadata": {"category": "infrastructure", "source": "networking-guide"}
+  },
+  {
+    "id": "doc-022",
+    "text": "BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained language model that uses masked language modelling and next sentence prediction. It revolutionized NLP by enabling transfer learning for downstream tasks.",
+    "metadata": {"category": "nlp", "source": "bert-paper"}
+  },
+  {
+    "id": "doc-023",
+    "text": "OAuth 2.0 is an authorization framework that enables third-party applications to obtain limited access to a web service. It works by delegating user authentication to the service that hosts the user account.",
+    "metadata": {"category": "security", "source": "oauth-spec"}
+  },
+  {
+    "id": "doc-024",
+    "text": "Batch normalization is a technique to normalize the inputs of each layer in a neural network, reducing internal covariate shift. It accelerates training and acts as a regularizer, sometimes eliminating the need for dropout.",
+    "metadata": {"category": "deep-learning", "source": "batchnorm-paper"}
+  },
+  {
+    "id": "doc-025",
+    "text": "GraphQL is a query language for APIs that allows clients to request exactly the data they need. Unlike REST, GraphQL uses a single endpoint and lets the client specify the structure of the response.",
+    "metadata": {"category": "web-development", "source": "graphql-docs"}
+  },
+  {
+    "id": "doc-026",
+    "text": "Elasticsearch is a distributed, RESTful search and analytics engine capable of storing and searching large volumes of data in near real-time. It is built on Apache Lucene and supports full-text search with inverted indices.",
+    "metadata": {"category": "search", "source": "elastic-docs"}
+  },
+  {
+    "id": "doc-027",
+    "text": "Recurrent Neural Networks (RNNs) process sequential data by maintaining a hidden state that captures information from previous time steps. LSTMs and GRUs address the vanishing gradient problem inherent in vanilla RNNs.",
+    "metadata": {"category": "deep-learning", "source": "rnn-survey"}
+  },
+  {
+    "id": "doc-028",
+    "text": "Apache Kafka is a distributed event streaming platform used for building real-time data pipelines and streaming applications. It provides high-throughput, fault-tolerant, publish-subscribe messaging.",
+    "metadata": {"category": "data-engineering", "source": "kafka-docs"}
+  },
+  {
+    "id": "doc-029",
+    "text": "Cross-entropy loss measures the difference between two probability distributions and is the standard loss function for classification tasks. In multi-class settings, it penalizes incorrect predictions logarithmically.",
+    "metadata": {"category": "machine-learning", "source": "loss-functions-ref"}
+  },
+  {
+    "id": "doc-030",
+    "text": "Uvicorn is a lightning-fast ASGI server implementation using uvloop and httptools. It is the recommended server for running FastAPI applications in production with support for HTTP/1.1 and WebSockets.",
+    "metadata": {"category": "web-framework", "source": "uvicorn-docs"}
+  },
+  {
+    "id": "doc-031",
+    "text": "Feature engineering is the process of using domain knowledge to create input features that improve machine learning model performance. Good features can be more important than the choice of algorithm.",
+    "metadata": {"category": "machine-learning", "source": "ml-best-practices"}
+  },
+  {
+    "id": "doc-032",
+    "text": "gRPC is a high-performance RPC framework that uses Protocol Buffers for serialization and HTTP/2 for transport. It supports bidirectional streaming and is widely used for inter-service communication in microservices.",
+    "metadata": {"category": "distributed-systems", "source": "grpc-docs"}
+  },
+  {
+    "id": "doc-033",
+    "text": "Dimensionality reduction techniques like PCA and t-SNE help visualize high-dimensional data and reduce computational costs. PCA finds orthogonal directions of maximum variance while t-SNE preserves local structure.",
+    "metadata": {"category": "machine-learning", "source": "dim-reduction-survey"}
+  },
+  {
+    "id": "doc-034",
+    "text": "JSON Web Tokens (JWT) are a compact, URL-safe means of representing claims between two parties. They consist of a header, payload, and signature and are commonly used for stateless authentication in web APIs.",
+    "metadata": {"category": "security", "source": "jwt-spec"}
+  },
+  {
+    "id": "doc-035",
+    "text": "Convolutional Neural Networks (CNNs) use convolutional layers to automatically learn spatial hierarchies of features from images. Architectures like ResNet and EfficientNet have achieved superhuman performance on image classification benchmarks.",
+    "metadata": {"category": "computer-vision", "source": "cnn-survey"}
+  },
+  {
+    "id": "doc-036",
+    "text": "Prometheus is an open-source monitoring and alerting toolkit designed for reliability and scalability. It uses a pull-based model to scrape metrics from instrumented applications and stores them in a time-series database.",
+    "metadata": {"category": "monitoring", "source": "prometheus-docs"}
+  },
+  {
+    "id": "doc-037",
+    "text": "Named Entity Recognition (NER) is an NLP task that identifies and classifies named entities such as persons, organisations, locations, and dates in unstructured text. Modern NER systems use transformer-based models fine-tuned on annotated corpora.",
+    "metadata": {"category": "nlp", "source": "ner-overview"}
+  },
+  {
+    "id": "doc-038",
+    "text": "Message queues like RabbitMQ decouple producers from consumers in distributed systems, enabling asynchronous processing and load leveling. They guarantee message delivery and support various exchange patterns.",
+    "metadata": {"category": "distributed-systems", "source": "rabbitmq-docs"}
+  },
+  {
+    "id": "doc-039",
+    "text": "Regularization techniques like L1, L2, and dropout prevent overfitting in machine learning models by adding constraints or noise during training. L2 regularization penalizes large weights while dropout randomly deactivates neurons.",
+    "metadata": {"category": "machine-learning", "source": "regularization-guide"}
+  },
+  {
+    "id": "doc-040",
+    "text": "Nginx is a high-performance HTTP server and reverse proxy known for its stability, rich feature set, and low resource consumption. It is commonly used to serve static content and as a load balancer in production deployments.",
+    "metadata": {"category": "infrastructure", "source": "nginx-docs"}
+  },
+  {
+    "id": "doc-041",
+    "text": "Transfer learning leverages pre-trained models on large datasets and fine-tunes them on domain-specific tasks. This approach drastically reduces training time and data requirements while achieving state-of-the-art performance.",
+    "metadata": {"category": "machine-learning", "source": "transfer-learning-survey"}
+  },
+  {
+    "id": "doc-042",
+    "text": "MongoDB is a document-oriented NoSQL database that stores data in flexible, JSON-like BSON documents. It supports rich queries, indexing, aggregation, and horizontal scaling through sharding.",
+    "metadata": {"category": "database", "source": "mongodb-docs"}
+  },
+  {
+    "id": "doc-043",
+    "text": "Tokenization in NLP is the process of breaking text into smaller units called tokens. Subword tokenization methods like BPE and WordPiece handle out-of-vocabulary words by splitting them into known subword units.",
+    "metadata": {"category": "nlp", "source": "tokenization-guide"}
+  },
+  {
+    "id": "doc-044",
+    "text": "Terraform is an infrastructure-as-code tool that lets you define cloud and on-premises resources in human-readable configuration files. It manages the lifecycle of infrastructure through a plan-and-apply workflow.",
+    "metadata": {"category": "devops", "source": "terraform-docs"}
+  },
+  {
+    "id": "doc-045",
+    "text": "Generative Adversarial Networks (GANs) consist of a generator and discriminator trained adversarially. The generator learns to create realistic data samples while the discriminator learns to distinguish real from generated samples.",
+    "metadata": {"category": "deep-learning", "source": "gan-paper"}
+  },
+  {
+    "id": "doc-046",
+    "text": "API rate limiting controls the number of requests a client can make within a specific time window. It protects services from abuse and ensures fair resource allocation among users. Common algorithms include token bucket and sliding window.",
+    "metadata": {"category": "web-development", "source": "api-design-guide"}
+  },
+  {
+    "id": "doc-047",
+    "text": "Retrieval-Augmented Generation (RAG) combines dense retrieval with language model generation to produce factually grounded responses. The retriever fetches relevant documents, which the generator uses as context to produce accurate answers.",
+    "metadata": {"category": "nlp", "source": "rag-paper"}
+  },
+  {
+    "id": "doc-048",
+    "text": "Git is a distributed version control system that tracks changes in source code during software development. It supports branching and merging workflows, enabling parallel development across teams.",
+    "metadata": {"category": "tooling", "source": "git-docs"}
+  },
+  {
+    "id": "doc-049",
+    "text": "Hyperparameter tuning involves selecting the optimal set of hyperparameters for a learning algorithm. Techniques include grid search, random search, and Bayesian optimization, each with different trade-offs between exploration and computation.",
+    "metadata": {"category": "machine-learning", "source": "hpo-guide"}
+  },
+  {
+    "id": "doc-050",
+    "text": "WebSockets provide full-duplex communication channels over a single TCP connection, enabling real-time data transfer between client and server. They are used in chat applications, live feeds, and collaborative editing tools.",
+    "metadata": {"category": "web-development", "source": "websocket-spec"}
+  },
+  {
+    "id": "doc-051",
+    "text": "The Vector Space Model represents documents and queries as vectors in a high-dimensional space. Similarity between documents is computed using distance metrics like cosine similarity or Euclidean distance.",
+    "metadata": {"category": "information-retrieval", "source": "ir-textbook"}
+  },
+  {
+    "id": "doc-052",
+    "text": "Celery is a distributed task queue for Python that enables asynchronous processing of long-running tasks. It integrates with message brokers like RabbitMQ and Redis and supports task scheduling, retries, and result backends.",
+    "metadata": {"category": "python", "source": "celery-docs"}
+  },
+  {
+    "id": "doc-053",
+    "text": "Data augmentation artificially increases the size of training datasets by applying transformations like rotation, flipping, cropping, and color jittering. In NLP, techniques include synonym replacement, back-translation, and paraphrasing.",
+    "metadata": {"category": "machine-learning", "source": "augmentation-guide"}
+  },
+  {
+    "id": "doc-054",
+    "text": "Service mesh architectures like Istio provide traffic management, security, and observability for microservices without requiring changes to application code. They use sidecar proxies to intercept and manage inter-service communication.",
+    "metadata": {"category": "infrastructure", "source": "istio-docs"}
+  },
+  {
+    "id": "doc-055",
+    "text": "Knowledge distillation is a model compression technique where a smaller student model learns to mimic a larger teacher model. The student is trained on the soft probability distributions produced by the teacher, capturing dark knowledge.",
+    "metadata": {"category": "deep-learning", "source": "distillation-paper"}
+  },
+  {
+    "id": "doc-056",
+    "text": "SQLAlchemy is Python's most popular ORM and SQL toolkit. It provides a full suite of enterprise-level persistence patterns, supporting both high-level ORM and low-level SQL expression language for database interaction.",
+    "metadata": {"category": "python", "source": "sqlalchemy-docs"}
+  },
+  {
+    "id": "doc-057",
+    "text": "Semantic search goes beyond keyword matching by understanding the meaning and context of queries. It uses dense embeddings to capture semantic similarity, enabling retrieval of conceptually related documents even without lexical overlap.",
+    "metadata": {"category": "information-retrieval", "source": "semantic-search-overview"}
+  },
+  {
+    "id": "doc-058",
+    "text": "Helm is a package manager for Kubernetes that simplifies the deployment and management of applications on Kubernetes clusters. It uses charts — pre-configured templates of Kubernetes resources — to define, install, and upgrade applications.",
+    "metadata": {"category": "devops", "source": "helm-docs"}
+  },
+  {
+    "id": "doc-059",
+    "text": "Variational Autoencoders (VAEs) are generative models that learn to encode data into a latent space and decode it back. They combine neural networks with variational inference to model complex data distributions.",
+    "metadata": {"category": "deep-learning", "source": "vae-paper"}
+  },
+  {
+    "id": "doc-060",
+    "text": "Caching strategies like LRU, LFU, and write-through reduce latency and database load by storing frequently accessed data in fast storage layers. Redis and Memcached are popular in-memory caching solutions.",
+    "metadata": {"category": "infrastructure", "source": "caching-guide"}
+  },
+  {
+    "id": "doc-061",
+    "text": "Sentence embeddings are fixed-length vector representations of sentences that capture semantic meaning. Models like Sentence-BERT produce embeddings suitable for tasks such as semantic search, clustering, and paraphrase detection.",
+    "metadata": {"category": "nlp", "source": "sentence-embeddings-survey"}
+  },
+  {
+    "id": "doc-062",
+    "text": "Blue-green deployment is a release strategy that reduces downtime by running two identical production environments. Traffic is switched from the old (blue) environment to the new (green) one once the deployment is verified.",
+    "metadata": {"category": "devops", "source": "deployment-strategies"}
+  },
+  {
+    "id": "doc-063",
+    "text": "Self-supervised learning enables models to learn representations from unlabeled data by creating pretext tasks. In NLP, masked language modelling and contrastive learning are prominent self-supervised objectives.",
+    "metadata": {"category": "machine-learning", "source": "ssl-survey"}
+  },
+  {
+    "id": "doc-064",
+    "text": "OpenAPI Specification (formerly Swagger) defines a standard, language-agnostic interface for RESTful APIs. FastAPI automatically generates OpenAPI schemas from Python type hints and Pydantic models.",
+    "metadata": {"category": "web-development", "source": "openapi-spec"}
+  },
+  {
+    "id": "doc-065",
+    "text": "Contrastive learning trains models by pulling similar pairs together and pushing dissimilar pairs apart in embedding space. Techniques like SimCLR and MoCo have achieved state-of-the-art results in self-supervised visual representation learning.",
+    "metadata": {"category": "deep-learning", "source": "contrastive-learning-survey"}
+  },
+  {
+    "id": "doc-066",
+    "text": "Apache Airflow is a platform for programmatically authoring, scheduling, and monitoring workflows. It uses directed acyclic graphs (DAGs) to define task dependencies and supports a rich ecosystem of operators and sensors.",
+    "metadata": {"category": "data-engineering", "source": "airflow-docs"}
+  },
+  {
+    "id": "doc-067",
+    "text": "Quantization reduces the precision of neural network weights from 32-bit floating point to 8-bit integers, significantly reducing model size and inference latency with minimal accuracy loss.",
+    "metadata": {"category": "model-optimization", "source": "quantization-guide"}
+  },
+  {
+    "id": "doc-068",
+    "text": "Inverted indices map terms to the documents containing them, enabling efficient full-text search. They are the core data structure behind search engines like Elasticsearch and Apache Lucene.",
+    "metadata": {"category": "information-retrieval", "source": "inverted-index-ref"}
+  },
+  {
+    "id": "doc-069",
+    "text": "Multi-head attention allows transformer models to attend to information from different representation subspaces simultaneously. Each head learns different aspects of the relationship between tokens in the sequence.",
+    "metadata": {"category": "deep-learning", "source": "transformer-paper"}
+  },
+  {
+    "id": "doc-070",
+    "text": "Infrastructure as Code (IaC) manages and provisions computing infrastructure through machine-readable configuration files rather than physical hardware configuration. Tools like Terraform and CloudFormation enable reproducible infrastructure management.",
+    "metadata": {"category": "devops", "source": "iac-guide"}
+  },
+  {
+    "id": "doc-071",
+    "text": "Embedding spaces are learned vector representations where geometric proximity corresponds to semantic similarity. Well-trained embeddings enable vector arithmetic, analogical reasoning, and efficient nearest neighbor search.",
+    "metadata": {"category": "machine-learning", "source": "embedding-spaces-tutorial"}
+  },
+  {
+    "id": "doc-072",
+    "text": "Rate limiting and circuit breakers are essential resilience patterns in distributed systems. Circuit breakers prevent cascading failures by temporarily blocking requests to failing services, while rate limiting controls request throughput.",
+    "metadata": {"category": "distributed-systems", "source": "resilience-patterns"}
+  },
+  {
+    "id": "doc-073",
+    "text": "Positional encoding injects information about token positions into transformer models, which lack inherent sequential awareness. Sinusoidal and learned positional encodings are the two most common approaches.",
+    "metadata": {"category": "deep-learning", "source": "positional-encoding-ref"}
+  },
+  {
+    "id": "doc-074",
+    "text": "Pytest is a mature Python testing framework that supports simple unit tests, complex functional testing, and parameterized tests. Its fixture system enables modular and reusable test setup and teardown.",
+    "metadata": {"category": "python", "source": "pytest-docs"}
+  },
+  {
+    "id": "doc-075",
+    "text": "Dense passage retrieval (DPR) uses dual encoders to separately encode queries and passages into dense vectors. It outperforms traditional sparse retrieval methods like BM25 on open-domain question answering benchmarks.",
+    "metadata": {"category": "information-retrieval", "source": "dpr-paper"}
+  },
+  {
+    "id": "doc-076",
+    "text": "Observability in distributed systems combines logging, metrics, and distributed tracing to understand system behaviour. Tools like Grafana, Jaeger, and the ELK stack provide comprehensive observability solutions.",
+    "metadata": {"category": "monitoring", "source": "observability-guide"}
+  },
+  {
+    "id": "doc-077",
+    "text": "Learning rate schedulers dynamically adjust the learning rate during training. Strategies like cosine annealing, step decay, and one-cycle policy help models converge faster and achieve better generalisation.",
+    "metadata": {"category": "machine-learning", "source": "lr-scheduler-guide"}
+  },
+  {
+    "id": "doc-078",
+    "text": "ASGI (Asynchronous Server Gateway Interface) is the spiritual successor to WSGI for Python async web applications. It supports HTTP, WebSockets, and long-lived connections, making it suitable for real-time applications.",
+    "metadata": {"category": "web-framework", "source": "asgi-spec"}
+  },
+  {
+    "id": "doc-079",
+    "text": "Cross-encoder models take a query-document pair as input and produce a relevance score. While more accurate than bi-encoder models for ranking, they are computationally expensive and typically used as re-rankers.",
+    "metadata": {"category": "information-retrieval", "source": "cross-encoder-guide"}
+  },
+  {
+    "id": "doc-080",
+    "text": "Model serving frameworks like TorchServe, Triton Inference Server, and BentoML provide production-grade infrastructure for deploying machine learning models. They handle batching, model versioning, health checks, and GPU resource management.",
+    "metadata": {"category": "mlops", "source": "model-serving-survey"}
+  }
+]
