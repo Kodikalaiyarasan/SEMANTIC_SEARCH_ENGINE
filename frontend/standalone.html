@@ -209,7 +209,8 @@
 
     function App() {
       const [activeTab, setActiveTab] = useState('search');
-      const [apiUrl, setApiUrl] = useState('http://localhost:9093');
+      // Default to /api so it works seamlessly on Cloud, VMs, and localhost
+      const [apiUrl, setApiUrl] = useState('/api');
 
       // Health check state
       const [healthStatus, setHealthStatus] = useState(null);

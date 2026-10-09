@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 function App() {
   const [activeTab, setActiveTab] = useState('search') // 'search' or 'index'
-  const [apiUrl, setApiUrl] = useState('http://localhost:9093')
+  const [apiUrl, setApiUrl] = useState('/api')
 
   // Health check state
   const [healthStatus, setHealthStatus] = useState(null)
