@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: semantic-search-engine
     ports:
-      - "8000:8000"
+      - "9093:9093"
     environment:
       - MODEL_PATH=sentence-transformers/all-MiniLM-L6-v2
       - DATA_DIR=data
@@ -16,8 +16,19 @@ services:
       - ./data:/app/data:ro
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:8000/health').raise_for_status()"]
+      test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:9093/health').raise_for_status()"]
       interval: 30s
       timeout: 5s
       start_period: 60s
       retries: 3
+
+  semantic-search-ui:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: semantic-search-ui
+    ports:
+      - "9092:9092"
+    restart: unless-stopped
+    depends_on:
+      - semantic-search

@@ -10,8 +10,8 @@ A production-ready semantic search microservice that encodes documents and queri
 
 ```
 ┌─────────────┐       ┌──────────────────────────────────────────────┐
-│   Client     │──────▶│  FastAPI  (uvicorn ASGI)                     │
-│  (httpx)     │◀──────│                                              │
+│   Client     │──────▶│  FastAPI  (uvicorn ASGI on port 9093)        │
+│  (httpx/UI)  │◀──────│                                              │
 └─────────────┘       │  ┌────────────────┐   ┌──────────────────┐   │
                       │  │ SentenceTransf. │   │  FAISS IndexFlatIP│   │
                       │  │ all-MiniLM-L6-v2│──▶│  (Cosine Sim.)   │   │
@@ -42,9 +42,15 @@ NLP/
 │   └── search_engine.py      # SentenceTransformer + FAISS core
 ├── data/
 │   └── corpus.json            # 80 real-world technical passages
+├── frontend/
+│   ├── Dockerfile             # Nginx-based container for React UI
+│   ├── nginx.conf             # Nginx server config (port 9092)
+│   ├── standalone.html        # Simple React 18 frontend
+│   ├── src/                   # React components & CSS
+│   └── package.json           # Vite & React dependencies
 ├── benchmark.py               # Latency benchmark (P50/P95/P99)
-├── Dockerfile                 # Multi-stage, non-root, cached weights
-├── docker-compose.yml
+├── Dockerfile                 # Multi-stage, non-root, cached weights (port 9093)
+├── docker-compose.yml         # Compose config for backend (9093) + UI (9092)
 ├── requirements.txt
 └── README.md
 ```
@@ -65,25 +71,22 @@ venv\Scripts\activate        # Windows
 pip install -r requirements.txt
 
 # 3. Start the server
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn app.main:app --host 0.0.0.0 --port 9093 --reload
 ```
 
 The server will:
 - Load the `all-MiniLM-L6-v2` model (~80MB, downloaded once)
 - Auto-index 80 documents from `data/corpus.json`
-- Serve on `http://localhost:8000`
+- Serve on `http://localhost:9093`
 
-### Option B: Run with Docker
+### Option B: Run with Docker (Recommended)
 
 ```bash
-# Build (downloads model weights during build — ~5 min first time)
-docker-compose build
-
-# Start
-docker-compose up -d
+# Build and start both API (port 9093) and React UI (port 9092)
+docker compose up -d --build
 
 # Check logs
-docker-compose logs -f semantic-search
+docker compose logs -f
 ```
 
 ---
@@ -93,7 +96,7 @@ docker-compose logs -f semantic-search
 ### `GET /health` — Health Check
 
 ```bash
-curl http://localhost:8000/health
+curl http://localhost:9093/health
 ```
 
 ```json
@@ -107,7 +110,7 @@ curl http://localhost:8000/health
 ### `POST /index` — Index Documents
 
 ```bash
-curl -X POST http://localhost:8000/index \
+curl -X POST http://localhost:9093/index \
   -H "Content-Type: application/json" \
   -d '{
     "documents": [
@@ -130,7 +133,7 @@ curl -X POST http://localhost:8000/index \
 ### `POST /search` — Semantic Search
 
 ```bash
-curl -X POST http://localhost:8000/search \
+curl -X POST http://localhost:9093/search \
   -H "Content-Type: application/json" \
   -d '{"query": "How do neural networks learn from data?", "top_k": 3}'
 ```
@@ -155,8 +158,8 @@ curl -X POST http://localhost:8000/search \
 
 ### Interactive Docs
 
-- **Swagger UI**: [http://localhost:8000/docs](http://localhost:8000/docs)
-- **ReDoc**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
+- **Swagger UI**: [http://localhost:9093/docs](http://localhost:9093/docs)
+- **ReDoc**: [http://localhost:9093/redoc](http://localhost:9093/redoc)
 
 ---
 
@@ -164,7 +167,7 @@ curl -X POST http://localhost:8000/search \
 
 ```bash
 # Make sure the server is running, then:
-python benchmark.py --url http://localhost:8000 --queries 100 --top-k 5
+python benchmark.py --url http://localhost:9093 --queries 100 --top-k 5
 ```
 
 **Expected output:**
@@ -173,7 +176,7 @@ python benchmark.py --url http://localhost:8000 --queries 100 --top-k 5
 ============================================================
   Semantic Search Engine — Latency Benchmark
 ============================================================
-  Target:   http://localhost:8000
+  Target:   http://localhost:9093
   Queries:  100
   Top-K:    5
 ============================================================
@@ -242,6 +245,28 @@ This means:
 | **Server** | Uvicorn (ASGI) | High-performance HTTP |
 | **Runtime** | Python 3.11 | Modern Python features |
 | **Container** | Docker (multi-stage) | Production deployment |
+
+---
+
+## 🖥️ Running Everything with Docker (API + UI)
+
+The entire application (FastAPI backend on port 9093 and the React UI on port 9092) is containerized with Docker Compose.
+
+```bash
+# 1. Build and start containers
+docker compose up -d --build
+
+# 2. View running logs
+docker compose logs -f
+
+# 3. Stop containers
+docker compose down
+```
+
+Once running:
+- **React UI**: [http://localhost:9092](http://localhost:9092)
+- **FastAPI Backend**: [http://localhost:9093](http://localhost:9093)
+- **API Swagger Docs**: [http://localhost:9093/docs](http://localhost:9093/docs)
 
 ---
 
