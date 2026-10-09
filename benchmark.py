@@ -225,8 +225,8 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--url",
-        default="http://localhost:8000",
-        help="Base URL of the search service (default: http://localhost:8000)",
+        default="http://localhost:9093",
+        help="Base URL of the search service (default: http://localhost:9093)",
     )
     parser.add_argument(
         "--queries",

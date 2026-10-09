@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: semantic-search-engine
     ports:
-      - "8000:8000"
+      - "9093:9093"
     environment:
       - MODEL_PATH=sentence-transformers/all-MiniLM-L6-v2
       - DATA_DIR=data
@@ -21,3 +21,14 @@ services:
       timeout: 5s
       start_period: 60s
       retries: 3
+
+  semantic-search-ui:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: semantic-search-ui
+    ports:
+      - "9092:9092"
+    restart: unless-stopped
+    depends_on:
+      - semantic-search

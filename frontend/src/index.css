@@ -1,0 +1,189 @@
+/* Simple beginner styling - plain, no gradients, minimal basic colors */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #222222;
+  margin-top: 0;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 8px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.status-box {
+  background-color: #f9f9f9;
+  border: 1px solid #dddddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status-indicator {
+  font-weight: bold;
+}
+
+.status-ok {
+  color: green;
+}
+
+.status-bad {
+  color: red;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 8px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border: 1px solid #999999;
+  background-color: #eeeeee;
+  color: #333333;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.tab-btn.active {
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button.submit-btn {
+  padding: 8px 18px;
+  background-color: #2b547e;
+  color: #ffffff;
+  border: 1px solid #1b3858;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.submit-btn:disabled {
+  background-color: #cccccc;
+  border-color: #aaaaaa;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  background-color: #ffe6e6;
+  border: 1px solid #ffb3b3;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.success-message {
+  color: green;
+  background-color: #e6ffe6;
+  border: 1px solid #b3ffb3;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.results-meta {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.result-card {
+  border: 1px solid #dddddd;
+  background-color: #fafafa;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #cccccc;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.result-rank {
+  font-weight: bold;
+  color: #222222;
+}
+
+.result-score {
+  font-weight: bold;
+  color: #2b547e;
+}
+
+.result-text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.result-meta {
+  font-size: 12px;
+  color: #555555;
+  background-color: #eeeeee;
+  padding: 6px;
+  border-radius: 2px;
+}

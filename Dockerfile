@@ -45,9 +45,9 @@ ENV PYTHONUNBUFFERED=1 \
     DATA_DIR="data" \
     AUTO_INDEX_FILE="corpus.json"
 
-EXPOSE 8000
+EXPOSE 9093
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=3 \
-    CMD python -c "import httpx; httpx.get('http://localhost:8000/health').raise_for_status()"
+    CMD python -c "import httpx; httpx.get('http://localhost:9093/health').raise_for_status()"
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "9093", "--workers", "1"]
