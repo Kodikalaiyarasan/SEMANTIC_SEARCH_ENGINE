@@ -4,7 +4,7 @@ Semantic Search Engine — Core Vector Retrieval Module.
 Encapsulates:
   • SentenceTransformer model loading & inference
   • L2 unit-normalization of embeddings → FAISS IndexFlatIP = exact cosine similarity
-  • Document store for id ↔ text/metadata mapping
+  • Document store for id ↔ text mapping
   • Top-k retrieval with similarity scores
 """
 
@@ -28,7 +28,7 @@ class DocumentRecord:
 
     document_id: str
     text: str
-    metadata: dict[str, Any]
+    metadata: dict[str, Any] = field(default_factory=dict)
 
 
 class SemanticSearchEngine:
@@ -46,17 +46,18 @@ class SemanticSearchEngine:
       reads; writes (``add``) are serialised by the GIL in CPython.
     """
 
-    MODEL_NAME: str = "sentence-transformers/all-MiniLM-L6-v2"
+    MODEL_NAME: str = "Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search"
 
     def __init__(self, model_path: str | None = None) -> None:
         """
         Parameters
         ----------
         model_path
-            Local path or Hugging Face hub identifier.  Falls back to
+            Local path or Hugging Face hub identifier. Falls back to
             ``MODEL_NAME`` when *None*.
         """
         resolved = model_path or self.MODEL_NAME
+        self._model_path: str = resolved
         logger.info("Loading SentenceTransformer model: %s", resolved)
 
         t0 = time.perf_counter()
@@ -64,7 +65,7 @@ class SemanticSearchEngine:
         load_ms = (time.perf_counter() - t0) * 1_000
         logger.info("Model loaded in %.1f ms", load_ms)
 
-        # Embedding dimensionality (384 for all-MiniLM-L6-v2)
+        # Embedding dimensionality (384 for all-MiniLM-L6-v2 architecture)
         self._dim: int = self._model.get_sentence_embedding_dimension()  # type: ignore[assignment]
 
         # FAISS inner-product index — with unit-normalised vectors this
@@ -88,7 +89,7 @@ class SemanticSearchEngine:
 
     @property
     def model_name(self) -> str:
-        return self.MODEL_NAME
+        return self._model_path
 
     @property
     def embedding_dim(self) -> int:
@@ -122,7 +123,7 @@ class SemanticSearchEngine:
         self,
         ids: list[str],
         texts: list[str],
-        metadatas: list[dict[str, Any]],
+        metadatas: list[dict[str, Any]] | None = None,
     ) -> int:
         """
         Encode and index a batch of documents.
@@ -134,7 +135,7 @@ class SemanticSearchEngine:
         texts
             Raw document texts.
         metadatas
-            Per-document metadata dicts.
+            Per-document metadata dicts (optional).
 
         Returns
         -------
@@ -144,12 +145,15 @@ class SemanticSearchEngine:
         if not texts:
             return 0
 
+        if metadatas is None:
+            metadatas = [{} for _ in texts]
+
         embeddings = self._encode(texts)
         self._index.add(embeddings)
 
         for doc_id, text, meta in zip(ids, texts, metadatas):
             self._documents.append(
-                DocumentRecord(document_id=doc_id, text=text, metadata=meta)
+                DocumentRecord(document_id=doc_id, text=text, metadata=meta or {})
             )
 
         logger.info(
@@ -158,6 +162,13 @@ class SemanticSearchEngine:
             self.index_size,
         )
         return len(texts)
+
+    def get_documents(self) -> list[dict[str, str]]:
+        """Return all stored documents."""
+        return [
+            {"id": doc.document_id, "text": doc.text}
+            for doc in self._documents
+        ]
 
     # ── Search ────────────────────────────────────────────────
 

@@ -128,6 +128,18 @@ BENCHMARK_QUERIES: list[str] = [
     "Deep learning training on GPU clusters",
     "Python type hints and static analysis",
     "Production ML system monitoring",
+    "binary search implementation in python",
+    "how to sort a list using merge sort",
+    "read csv file into list of dictionaries",
+    "flatten a nested list recursively",
+    "LRU cache with get and put operations",
+    "fetch multiple urls concurrently with aiohttp",
+    "connect to postgresql database in python",
+    "build rest api with fastapi and pydantic",
+    "breadth first search shortest path in graph",
+    "train logistic regression with numpy from scratch",
+    "two sum problem hash map solution",
+    "retry decorator with exponential backoff",
 ]
 
 

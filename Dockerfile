@@ -31,7 +31,7 @@ USER appuser
 
 # Environment
 ENV PYTHONUNBUFFERED=1 \
-    MODEL_PATH="sentence-transformers/all-MiniLM-L6-v2" \
+    MODEL_PATH="Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search" \
     DATA_DIR="data" \
     AUTO_INDEX_FILE="corpus.json"
 
