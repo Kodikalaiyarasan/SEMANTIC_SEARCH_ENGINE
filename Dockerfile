@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir torch==2.3.1 --index-url https://download.pytorch
 
 # 2. Install remaining requirements
 COPY requirements.txt .
-RUN pip install --no-cache-dir sentence-transformers==3.0.1 transformers==4.42.4 faiss-cpu==1.8.0 numpy==1.26.4 fastapi==0.111.1 "uvicorn[standard]==0.30.3" pydantic==2.8.2 httpx==0.27.0
+RUN pip install --no-cache-dir sentence-transformers==5.7.0 transformers==4.42.4 faiss-cpu==1.8.0 numpy==1.26.4 fastapi==0.111.1 "uvicorn[standard]==0.30.3" pydantic==2.8.2 httpx==0.27.0
 
 # Copy application files
 COPY app/ ./app/
