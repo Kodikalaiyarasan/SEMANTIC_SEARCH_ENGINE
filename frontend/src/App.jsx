@@ -35,7 +35,19 @@ function App() {
   const checkHealth = async () => {
     setHealthLoading(true)
     try {
-      const response = await fetch(`${apiUrl}/health`)
+      let currentUrl = apiUrl
+      let response
+      try {
+        response = await fetch(`${currentUrl}/health`)
+      } catch (fetchErr) {
+        if (currentUrl === '/api') {
+          currentUrl = 'http://localhost:9093'
+          setApiUrl('http://localhost:9093')
+          response = await fetch(`${currentUrl}/health`)
+        } else {
+          throw fetchErr
+        }
+      }
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
