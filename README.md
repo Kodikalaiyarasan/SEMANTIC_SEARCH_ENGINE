@@ -10,8 +10,8 @@ A production-ready semantic search microservice that encodes documents and queri
 
 ```
 ┌─────────────┐       ┌──────────────────────────────────────────────┐
-│   Client     │──────▶│  FastAPI  (uvicorn ASGI on port 9093)        │
-│  (httpx/UI)  │◀──────│                                              │
+│   Client     │──────▶│  FastAPI  (uvicorn ASGI)                     │
+│  (httpx)     │◀──────│                                              │
 └─────────────┘       │  ┌────────────────┐   ┌──────────────────┐   │
                       │  │ SentenceTransf. │   │  FAISS IndexFlatIP│   │
                       │  │ all-MiniLM-L6-v2│──▶│  (Cosine Sim.)   │   │
@@ -270,6 +270,5 @@ Once running:
 
 ---
 
-## 📜 License
 
-MIT
+
