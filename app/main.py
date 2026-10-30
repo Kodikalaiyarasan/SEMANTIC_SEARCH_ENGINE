@@ -50,9 +50,9 @@ logger = logging.getLogger(__name__)
 AVAILABLE_MODELS: dict[str, dict[str, str]] = {
     "fine_tuned": {
         "id": "fine_tuned",
-        "name": "Fine-Tuned Code Search (Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search)",
+        "name": "Fine-Tuned Code Search v2 (Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2)",
         "path": os.getenv(
-            "MODEL_PATH", "Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search"
+            "MODEL_PATH", "Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2"
         ),
         "description": "Fine-tuned on Python CodeSearchNet for programming code & technical retrieval",
     },

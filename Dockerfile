@@ -31,7 +31,7 @@ USER appuser
 
 # Environment
 ENV PYTHONUNBUFFERED=1 \
-    MODEL_PATH="Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search" \
+    MODEL_PATH="Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2" \
     DATA_DIR="data" \
     AUTO_INDEX_FILE="corpus.json"
 

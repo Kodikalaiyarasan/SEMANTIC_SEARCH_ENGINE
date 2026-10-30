@@ -9,7 +9,7 @@ services:
     ports:
       - "9093:9093"
     environment:
-      - MODEL_PATH=Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search
+      - MODEL_PATH=Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2
       - DATA_DIR=data
       - AUTO_INDEX_FILE=corpus.json
     volumes:

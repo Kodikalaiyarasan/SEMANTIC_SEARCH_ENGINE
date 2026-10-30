@@ -46,7 +46,7 @@ class SemanticSearchEngine:
       reads; writes (``add``) are serialised by the GIL in CPython.
     """
 
-    MODEL_NAME: str = "Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search"
+    MODEL_NAME: str = "Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2"
 
     def __init__(self, model_path: str | None = None) -> None:
         """

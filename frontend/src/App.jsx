@@ -249,7 +249,7 @@ function App() {
             onChange={(e) => handleModelChange(e.target.value)}
           >
             <option value="fine_tuned">
-              🚀 Fine-Tuned Model (Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search)
+              🚀 Fine-Tuned Model v2 (Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2)
             </option>
             <option value="base">
               📦 Base Model (sentence-transformers/all-MiniLM-L6-v2)

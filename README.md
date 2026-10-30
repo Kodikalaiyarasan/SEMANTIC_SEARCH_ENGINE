@@ -2,7 +2,7 @@
 
 > **Dense Vector Retrieval** powered by **SentenceTransformers** + **FAISS** with **sub-50ms** query latency
 
-A production-ready semantic search microservice powered by a fine-tuned embedding model (`Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search`) trained on CodeSearchNet for natural language to technical documentation and Python code retrieval, performing exact cosine similarity search via FAISS `IndexFlatIP`.
+A production-ready semantic search microservice powered by a fine-tuned embedding model (`Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2`) trained on CodeSearchNet for natural language to technical documentation and Python code retrieval, performing exact cosine similarity search via FAISS `IndexFlatIP`.
 
 ---
 
@@ -75,7 +75,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 9093 --reload
 ```
 
 The server will:
-- Load the fine-tuned `Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search` model (~80MB, downloaded once)
+- Load the fine-tuned `Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2` model (~80MB, downloaded once)
 - Auto-index 100 documents from `data/corpus.json` (technical concepts + Python code)
 - Serve on `http://localhost:9093`
 
@@ -103,7 +103,7 @@ curl http://localhost:9093/health
 {
   "status": "healthy",
   "index_size": 100,
-  "model_name": "Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search"
+  "model_name": "Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2"
 }
 ```
 
@@ -229,7 +229,7 @@ This means:
 
 | Environment Variable | Default | Description |
 |---------------------|---------|-------------|
-| `MODEL_PATH` | `Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search` | HuggingFace model ID or local path |
+| `MODEL_PATH` | `Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2` | HuggingFace model ID or local path |
 | `DATA_DIR` | `data` | Directory containing the seed corpus |
 | `AUTO_INDEX_FILE` | `corpus.json` | Filename to auto-index on startup |
 
@@ -239,7 +239,7 @@ This means:
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
-| **NLP / Code Model** | `Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search` | Fine-tuned code & text embeddings |
+| **NLP / Code Model** | `Kodikalaiyarasan/all-MiniLM-L6-v2-tech-code-search-v2` | Fine-tuned code & text embeddings |
 | **Vector Index** | FAISS `IndexFlatIP` | Exact cosine similarity search |
 | **Web Framework** | FastAPI + Pydantic v2 | Async API with validation |
 | **Server** | Uvicorn (ASGI) | High-performance HTTP |
